@@ -8,6 +8,6 @@
 
 #define LED_GPIO_NUM        (2)
 #define PHOTRES_GPIO_NUM    (4)
-#define SERVO_GPIO_NUM      (16)
+#define SERVO_GPIO_NUM      (15)
 
 #endif // __APP_CONFIG_H

@@ -69,7 +69,6 @@ void loop() {
 
   servo.write(servo_angle);
 
-  delay(1000);
 }
 
 void app_periph_init() {
