@@ -62,9 +62,10 @@ void loop() {
   photores_value = constrain(photores_value, photores_lower, photores_upper);
 
   // Transform photoresistor value from ADC range to servo range
-  servo_angle = ( (photores_value - photores_lower) * (180) ) / (double)( photores_upper - photores_lower ) + photores_lower;
+  servo_angle = (uint8_t)(
+  ((photores_value - photores_lower) * 180.0) / (photores_upper - photores_lower)
+  );
 
-  Serial.printf("photoresisor value = %" PRIu16 ", servo angle = %" PRIu8, photores_value, servo_angle);
   Serial.println();
 
   servo.write(servo_angle);
